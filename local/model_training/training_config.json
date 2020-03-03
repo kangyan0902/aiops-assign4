@@ -3,6 +3,6 @@
     "embeddings_vector_size": 25,
     "padding_size": 20,
     "batch_size": 100,
-    "embeddings_path": "s3://bucketkangtwitter/model/glove.twitter_aicloud.27B.25d.txt",
+    "embeddings_path": "/Users/yankang/aiops-assign4/glove.twitter_aicloud.27B.25d.txt",
     "input_tensor_name": "embedding_input"
 }

@@ -1,20 +1,17 @@
 import os
 import tensorflow as tf
 import numpy as np
-import s3fs
 
 def keras_model_fn(_, config):
     """
     Creating a CNN model for sentiment modeling
     """
 
-    fs = s3fs.S3FileSystem()
-
 
 
     embeddings_path=config["embeddings_path"]
 
-    f = fs.open(embeddings_path)
+    f = open(embeddings_path)
     temp = f.readlines()[:config["embeddings_dictionary_size"]]
     f.close()
     embedding_matrix = np.zeros((config["embeddings_dictionary_size"], config["embeddings_vector_size"]))
